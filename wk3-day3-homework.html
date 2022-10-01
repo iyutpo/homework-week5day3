@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+<style>
+    div {
+        margin: 40px;
+    }
+</style>
+</head>
+<body>
+
+<div>
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+</div>
+
+<div>
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+</div>
+
+<div>
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+</div>
+
+<div>
+  <label>
+    Integer:
+    <input type="number" id="int-input" size="2">
+  </label>
+  <button id="int-button">Calculate</button>
+</div>
+
+<div>
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+</div>
+
+<div id="solution"></div>
+
+
+<script>
+
+  function squareNumber(num) {
+      var squaredNumber = num * num;
+      document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squaredNumber;
+  }
+  var squareButton = document.getElementById("square-button");
+  squareButton.addEventListener("click", function() {
+    var num = document.getElementById("square-input").value;
+    squareNumber(num);
+  });
+
+  /* Preview this page on the browser and test the first calculation */
+
+  /* Now it's your turn to do the rest as seen on the preview */
+
+  /* WRITE YOUR HOMEWORK SCRIPTS BELOW HERE */
+  // find half
+  function halfNumber(n) {
+    var res = n / 2;
+    document.getElementById("solution").innerHTML = 'The result of halfing the number ' + n + ' is ' + res;
+  }
+  var halfButton = document.getElementById("half-button");
+  halfButton.addEventListener("click", function() {
+    var num = document.getElementById("half-input").value;
+    halfNumber(num);
+  });
+
+  // find fraction
+  function fractionNumber(n, w) {
+    var res = n / w * 100;
+    document.getElementById("solution").innerHTML = n + ' is ' + res + '% of ' + w;
+  }
+  var fractionButton= document.getElementById("percent-button");
+  fractionButton.addEventListener("click", function() {
+    var n = document.getElementById("percent1-input").value;
+    var w = document.getElementById('percent2-input').value;
+    fractionNumber(n, w);
+  });
+
+  // find Integer
+  function intNumber(n) {
+    var res = Math.round(n);
+    document.getElementById("solution").innerHTML = 'The nearest whole number of ' + n + ' is ' + res;
+  }
+  var intButton = document.getElementById("int-button");
+  intButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    intNumber(num);
+  });
+
+  // find area of circle with radius
+  function areaNumber(n) {
+    var res = n * n * Math.PI;
+    document.getElementById("solution").innerHTML = 'The area of circle with radius ' + n + ' is ' + res;
+  }
+  var areaButton = document.getElementById("area-button");
+  areaButton.addEventListener("click", function() {
+    var num = document.getElementById("area-input").value;
+    areaNumber(num);
+  });
+
+</script>
+</body>
+</html>

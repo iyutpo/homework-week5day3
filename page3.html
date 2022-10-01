@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First web page</title>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+<body>
+    <div>
+        <main>
+            <form action="/signup" method="post">
+                <fieldset>
+                    <legend>User personal information</legend>
+                    <label>Enter your full name</label>
+                    <input type="text" name="name">
+                    <label>Enter your email</label>
+                    <input type="email" name="email">
+                    <label>Enter your phone</label>
+                    <input type="text" name="phone">
+                    <br><label>Select your gender</label>
+                    <input type="radio" name="gender" value="male">male
+                    <input type="radio" name="gender" value="female">female
+                    <br><label>How should we contact you?</label>
+                    <select>
+                        <option>Email</option>
+                        <option>Phone</option>
+                    </select><br>
+                    <br>Tell us the reason of your visit today:
+                    <textarea cols="30" rows="5"></textarea>
+                    <input type="submit" value="sign-up">
+                </fieldset>
+            </form>
+        </main>
+        
+        <footer>&copy; Copyright 2022</footer>
+        
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
