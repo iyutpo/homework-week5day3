@@ -159,7 +159,7 @@ th, td {
     vertical-align: middle;
     border: solid 1px #852b1b;
 }
-.available:hover {
+.tdhighlight:hover {
     cursor: pointer;
 }
 th:first-child {
@@ -228,7 +228,30 @@ span {
     background: linear-gradient(rgba(251, 215, 139, 1) 0%, rgba(119, 213, 245, 1) 100%);
 }
 
-
+/* for displaySelected */
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+#activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+#activities main #result h4{
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
 
 
 
