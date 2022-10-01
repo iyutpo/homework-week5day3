@@ -13,9 +13,10 @@ $(document).ready(function() {
         if (content != 'Not Available') {
             $(this).toggleClass('tdhighlight');
             if ($(this).hasClass('tdhighlight')) {
+                var header = $(this).closest('table').find('th').eq($(this).index()).text()
                 $('#displaySelected').css('visibility', 'visible');
                 $('#displaySelected').css('margin-top', '2em');
-                $('#result').append('<p>' + content + '</p>');
+                $('#result').append('<p>' + content + ' at ' + header + '</p>');
                 $(this).css({'background-color': '#00ff00'});
             } else {
                 $(this).css({'background-color': '#eeffe6'});
